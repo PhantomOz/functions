@@ -20,11 +20,7 @@ app.use(express.json());
 // - API routes
 app.get("/", (req, res) => res.status(200).send("hello world"));
 app.post("/clone-51ce0/us-central1/api/payments/create", async (req, res) => {
-  // eslint-disable-next-line indent
-  // eslint-disable-next-line indent
   const total = req.query.total;
-  // eslint-disable-next-line indent
-  console.log("payment request recieved BOOM!!! for this amount >>>", total);
   const paymentIntent = await stripe.paymentIntents.create({
     amount: total,
     currency: "usd",
@@ -35,9 +31,8 @@ app.post("/clone-51ce0/us-central1/api/payments/create", async (req, res) => {
   });
 });
 // - Listen Command
-// exports.api = functions.https.onRequest(app);
 const PORT = process.env.PORT || 4000
 app.listen(PORT, () => {
     console.log(`Server started on ${PORT}`);
 });
-// http://localhost:5001/clone-51ce0/us-central1/api
+
