@@ -18,7 +18,8 @@
     "express": "^4.17.1",
     "firebase-admin": "^9.2.0",
     "firebase-functions": "^3.11.0",
-    "react-paystack": "^3.0.3"
+    "react-paystack": "^3.0.3",
+    "stripe": "^8.132.0"
   },
   "devDependencies": {
     "eslint": "^7.6.0",
